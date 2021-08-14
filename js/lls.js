@@ -3,7 +3,7 @@ let path = $request.path
 
 body = JSON.parse(body);
 
-console.log(path);
+//console.log(path);
 if (path === "/api/v1/caen/package"){
     for(var key in body){
         if(body[key].hasOwnProperty('bought')){
@@ -40,7 +40,7 @@ if (path === "/api/v1/caen/user_courses/elite"){
 }
 
 if (path.indexOf("session_reviews") !== -1 || path.indexOf("/grammar/") !== -1){
-    console.log(path);
+    //console.log(path);
     body_str = JSON.stringify(body);
     body_str = body_str.replace(/"unlock":false/g, '"unlock":true')
     body_str = body_str.replace(/"subscriptionStatus":\d/g, '"subscriptionStatus":1')
@@ -49,7 +49,7 @@ if (path.indexOf("session_reviews") !== -1 || path.indexOf("/grammar/") !== -1){
 }
 
 
-$notify("title", "123", "content");
+//$notify("title", "123", "content");
 body = JSON.stringify(body);
 // 查看信息
 //console.log(body);
