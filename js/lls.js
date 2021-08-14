@@ -39,10 +39,11 @@ if (path === "/api/v1/caen/user_courses/elite"){
     body = JSON.parse(body_str);
 }
 
-if (path.indexOf("session_reviews") !== -1 ){
+if (path.indexOf("session_reviews") !== -1 || path.indexOf("/grammar/") !== -1){
     console.log(path);
     body_str = JSON.stringify(body);
     body_str = body_str.replace(/"unlock":false/g, '"unlock":true')
+    body_str = body_str.replace(/"unlocked":false/g, '"unlocked":true')
     body = JSON.parse(body_str);
 }
 
