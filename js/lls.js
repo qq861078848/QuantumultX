@@ -2,7 +2,7 @@ let body = $response.body
 let path = $request.path
 
 body = JSON.parse(body);
-
+console.log(path);
 if (path === "/api/v1/caen/package"){
     for(var key in body){
         if(body[key].hasOwnProperty('bought')){
@@ -40,14 +40,11 @@ if (path === "/api/v1/caen/user_courses/elite"){
 
 if (path === "/api/v1/ncc/session_reviews"){
     console.log(path);
-    body_str = JSON.stringify(body);
-    body_str = body_str.replace(/"unlock":false/g, '"unlock":true')
-    body = JSON.parse(body_str);
 }
 
 
 $notify("title", "123", "content");
 body = JSON.stringify(body);
 // 查看信息
-console.log(body);
+//console.log(body);
 $done({ body })
