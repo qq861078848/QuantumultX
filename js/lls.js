@@ -12,6 +12,7 @@ if (path === "/api/v1/caen/package"){
             for(var key2 in body["darwin"]){
                 if(body["darwin"][key2].hasOwnProperty('bought')){
                     body["darwin"][key2]["bought"] = true;
+                    body["darwin"][key2]["subscriptionStatus"] = 1;
                 }
             }
         }
