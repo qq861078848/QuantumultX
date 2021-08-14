@@ -4,9 +4,10 @@ body = JSON.parse(body)
 
 console.log(path);
 if (path === "/api/v1/caen/package"){
-    body['darwin']['bought'] = true;
     for(var key in body){
-        console.log(key)
+        if(body[key].hasOwnProperty('bought')){
+            body[key]["bought"] = true;
+        }
     }
 }
 
