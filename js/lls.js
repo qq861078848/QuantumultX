@@ -1,6 +1,6 @@
 let body_str = $response.body
 let path = $request.path
-body = JSON.parse(body_str)
+let body = JSON.parse(body_str)
 
 console.log(path);
 if (path === "/api/v1/caen/package"){
