@@ -12,7 +12,6 @@ if (path === "/api/v1/caen/package"){
             body[key]["remainDays"] = 999999;
             if(key === "bell"){
                 body[key]["expiredAtSec"] = "1888888888";
-                body[key]["startedAtSec"] = "1626415089";
                 body[key]["bellPtFinished"] = false;
             }
         }
@@ -28,6 +27,12 @@ if (path === "/api/v1/caen/package"){
     }
 }
 
+
+if (path === "/api/v1/bell/mine"){
+    body["status"] = 2;
+    body["started_at_sec"] = 1600000000;
+    body["expired_at_sec"] = 1888888888;
+}
 $notify("title", "123", "content");
 body = JSON.stringify(body);
 // 查看信息
