@@ -42,7 +42,7 @@ if (path === "/api/v1/caen/user_courses/elite"){
 if (path.indexOf("session_reviews") !== -1 ){
     console.log(path);
     body_str = JSON.stringify(body);
-    body_str = body_str.replace(/"unlock":false/, '"unlock":true')
+    body_str = body_str.replace(/"unlock":false/g, '"unlock":true')
     body = JSON.parse(body_str);
 }
 
