@@ -12,6 +12,7 @@ if (path === "/api/v1/caen/package"){
             body[key]["remainDays"] = 999999;
             if(key === "bell"){
                 body[key]["expiredAtSec"] = "1888888888";
+                body[key]["startedAtSec"] = "1626415089";
                 body[key]["bellPtFinished"] = false;
             }
         }
