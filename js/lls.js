@@ -10,6 +10,7 @@ if (path === "/api/v1/caen/package"){
             body[key]["expired"] = false;
             body[key]["expiredAtSec"] = 1888888888;
             body[key]["expiresAt"] = 1888888888;
+            body[key]["bellPtFinished"] = false;
 
         }
         if(key === "darwin"){
