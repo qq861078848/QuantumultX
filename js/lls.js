@@ -10,7 +10,6 @@ if (path === "/api/v1/caen/package"){
         }
         if(key === "darwin"){
             for(var key2 in body["darwin"]){
-                console.log(body[key][key2])
                 if(body["darwin"][key2].hasOwnProperty('bought')){
                     body["darwin"][key2]["bought"] = true;
                 }
@@ -20,5 +19,7 @@ if (path === "/api/v1/caen/package"){
 }
 
 $notify("title", "123", "content");
-body = JSON.stringify(body)
+body = JSON.stringify(body);
+// 查看信息
+console.log(body);
 $done({ body })
